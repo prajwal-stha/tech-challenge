@@ -1,7 +1,95 @@
-## Environment
+# 📝 Notes App (Fullstack)
 
-If you meet any error while running the project, check the options bellow. And if you are using Windows, it is recommended to run the project using powershell or cmd.
+A simple notes app built with:
 
-Node verion: v18 or later
+- ✅ **Next.js (App Router)** frontend
+- ✅ **Flask** backend using JWT Auth (HttpOnly Cookies)
 
-OS: Mac, Linux, Windows(An unexpected issue may arise)
+---
+
+## 📦 Folder Structure
+
+```
+notes-auth-app/
+├── backend/   # Flask API
+└── frontend/  # Next.js app
+```
+
+---
+
+## ⚙️ Backend Setup (Flask)
+
+### 1. Go to backend directory
+
+```bash
+cd backend
+```
+
+### 2. Create virtualenv (optional but recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r  requirements.txt
+```
+
+### 4. Run the Flask API
+
+```bash
+python app.py
+```
+
+- Runs on `http://localhost:5001`
+- Uses JWT in HttpOnly cookies
+- Includes login/logout + notes CRUD
+
+---
+
+## 🌐 Frontend Setup (Next.js)
+
+### 1. Go to frontend directory
+
+```bash
+cd frontend
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+
+### 3. Create `.env.local`
+
+```env
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5001/api
+```
+
+### 4. Run Next.js app
+
+```bash
+npm run dev
+```
+
+- Runs on `http://localhost:3000`
+- Includes:
+  - `/login` page
+  - `/notes` dashboard (protected)
+  - JWT cookie automatically sent to backend
+
+---
+
+## 🔐 Default Credentials
+
+```
+Username: tech
+Password: tech_challenge$$$123
+```
+
+---
