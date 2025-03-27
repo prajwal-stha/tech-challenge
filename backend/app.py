@@ -55,7 +55,7 @@ def login():
 @app.route('/api/logout', methods=['POST'])
 def logout():
     resp = jsonify({'logout': True})
-    resp.delete_cookie('access_token')
+    resp.delete_cookie('TECH_CHALLENGE_ACCESS_TOKEN')
     return resp
 
 
