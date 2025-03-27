@@ -10,7 +10,7 @@ A simple notes app built with:
 ## 📦 Folder Structure
 
 ```
-notes-auth-app/
+tech-challenge/
 ├── backend/   # Flask API
 └── frontend/  # Next.js app
 ```
